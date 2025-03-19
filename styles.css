@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    color: white;
+}
+
+strong {
+    color: rgb(54, 204, 204);
+}
+
+a {
+    background-color: rgb(54, 204, 204);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:black;
+}
+
