@@ -67,7 +67,8 @@ a {
 
 .img {
     border-style: #B3D8A8;
-    object-position: center
+    text-align: left;
+    margin-left: 20px;
 }
 
 
