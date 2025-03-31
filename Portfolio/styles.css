@@ -1,13 +1,12 @@
 /* cores: https://colorhunt.co/palette/3d8d7ab3d8a8fbffe4a3d1c6 */
 
 :root {
-    --dark-bg: #000000;                   /* Fundo preto esverdeado */
-    --primary: #4A6B5F;                   /* Verde-azulado esmaecido (substitui o #1F7D53) */
-    --primary-dark: #3c553a;              /* Para hovers */
-    --accent: #e2e4ff2a;                    /* Verde-cinza claro (destaques) */
-    --text: #CAE0BC;  /* Cinza claro para texto */        
-    --glow-1: rgba(175, 245, 175, 0.199);  /* Cor de luz 1 (baseada na sua paleta) */
-    --glow-2: rgba(64, 175, 149, 0.185);  /* Cor de luz 2 */
+    --dark-bg: #000000;
+    --primary: #4A6B5F;
+    --accent: #e2e4ff2a;
+    --text: #CAE0BC;
+    --glow-1: rgba(175, 245, 175, 0.199);
+    --glow-2: rgba(64, 175, 149, 0.185);
     --glow-3: rgba(82, 27, 27, 0.171);
 }
 
