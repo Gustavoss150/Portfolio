@@ -14,6 +14,7 @@
     padding: 0;
     margin: 0;
     transition: color 0.3s, background-color 0.3s, transform 0.2s;
+    display: flexbox;
 }
 
 body {
@@ -40,64 +41,107 @@ body::before {
     opacity: 0.7;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 .navBar {
-    font-size: 30px;
-    text-align: center;
+    font-size: 20px;
     padding: 25px 0;
-    box-shadow: 
-        0px 1px 5px var(--accent); 
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
 }
 
-.summary {
+.nav-link {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 40px; /* Espaço entre itens reduzido */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link a {
+    color: var(--text);
+    text-decoration: none;
     font-weight: 300;
-    font-size: 15px;
-    padding: 30px;
-    margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+    /* Remove todos os efeitos de botão */
+    box-shadow: none;
+    background: transparent;
 }
 
-.basics, .designIntro {
+.nav-link a:hover {
+    color: #95daa7; /* Cor do strong */
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+}
+
+h1#inicio {
+    font-size: 50px;
+    font-weight: 300;
+    padding-top: 260px;
+    padding-left: 80px;
+    padding-bottom: 115px;
+    text-align: left;
+    color: #95daa7;
+    display: flex;
+    flex-direction: column; /* Título principal acima dos subtítulos */
+    gap: 10px; /* Espaço entre o título e os subtítulos */
+}
+
+.subtitulos {
+    margin-inline: 60px;
+    display: flex;
+    flex-direction: row; /* Subtítulos lado a lado */
+    gap: 80px; /* Espaço entre os subtítulos */
+    font-size: 20px;
+}
+
+.designIntro .left .inicio, .designIntro {
     background-color: rgba(0, 0, 0, 0.384); /* Fundo semi-transparente */
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.basics {
+.designIntro .left .inicio, .designIntro .basics h2 {
     font-size: 25px;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 10px;
-    border: 1px;
-    box-shadow: 0 2px 4px var(--accent);
+    font-weight: 100;
+    padding: 0;
 }
 
-.basics h1 {
-    font-weight: 400;
-    padding-bottom: 10px;
-}
 .basics h2 {
-    font-weight: 400;
-    padding-bottom: 10px;
-}
-
-p {
+    font-size: 22px;
     font-weight: 300;
+    line-height: 1.6;
 }
 
 .designIntro {
     display: flex;
-    flex-direction: row; /* Coloca os itens na horizontal*/
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 100px auto;
+    max-width: 1300px;
+    padding: 0 40px;
 }
 
 .designIntro .left {
-    text-align: left;
+    text-align: justify;
+    align-items: left;
 }
+
 
 .designIntro .right .imgIntro img {
     width: 350px;
     height: 350px;
     text-align: right;
-    padding: 40px;
+    align-items: right;
+    padding-top: 50px;
+    padding-bottom: 50px;
     object-fit: cover;
     border-radius: 50%;
     margin-right: 20px;
@@ -112,8 +156,13 @@ strong {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
+    padding-top: 100px;
     margin: 20px;
+}
+
+.redeBtn {
+    display: flex;
+    gap: 20px;
 }
 
 a {
@@ -131,6 +180,7 @@ a {
     color: var(--text);
     box-shadow: -1px 2px 2px var(--accent);
     transition: 0.3s;
+    text-decoration: none;
 }
 
 a:hover {
@@ -140,10 +190,11 @@ a:hover {
     box-shadow: 1px 2px 5px var(--accent);
 }
 
-.aboutMe h5{
+.aboutMe h4{
     font-size: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-top: 0;
+    padding-bottom: 30px;
     font-weight: 600;
 }
 
@@ -176,11 +227,12 @@ a:hover {
 }
 
 footer {
-    font-size: 20px;
+    padding: 30px 0;
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: 300;
     text-align: center;
-    padding: 25px 0;
-    box-shadow: 
-        0 -10px 15px -3px rgba(138, 155, 141, 0.1);
 }
 
 @keyframes float {
@@ -189,10 +241,16 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .designIntro {
-        flex-direction: column;  /* Empilha imagem e texto em mobile */
+    .nav-link {
+        gap: 20px;
+        flex-direction: column;
     }
-    .imgIntro img {
-        margin-right: 0 !important;
+    
+    .aboutMe-content {
+        flex-direction: column;
+    }
+    
+    .imgArmy {
+        margin: 0 auto 30px;
     }
 }

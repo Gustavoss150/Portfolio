@@ -15,34 +15,41 @@
 </head>
 
 <body> 
-    <header class="navBar">
-        Logo, menu de nav
+    <header>
+        <nav class="navBar">
+            <ul class="nav-link">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#about">Sobre mim</a></li>
+                <li><a href="#redes">Redes</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <h1 id="inicio">
+            Gustavo de Souza dos Santos
+            <div class="subtitulos">
+                <p>Desenvolvedor Back-End</p>
+                <p>Eficiência e Escalibilidade</p>
+            </div>
+        </h1>
         <div class="designIntro">
             <div class="left">
-                <div class="summary">
-                    <div class="basics">
-                        <h1>Portfólio</h1>
-                        <h2>Gustavo de Souza dos Santos</h2>
-                        <li>Desenvolvedor Back-End</li> 
-                        <li>Estudante de Engenharia de Software</li>
-                    </div>
-                    <h3>
+                <div class="basics">
+                    <h2>
                         <p>Olá, meu nome é Gustavo, sou um <strong>desenvolvedor back-end</strong> e um
                             estudante de <strong>Engenharia de Software</strong>. Tenho experiência com
                             desenvolvimento e manutenção de <strong>APIs</strong> e sistemas web. Atuo principalmente
                             com <strong>Go (Golang)</strong>, <strong> Java</strong> e <strong>Python</strong>.
                         </p>
-                    </h3>
+                    </h2>
                 </div>
-                <div>
-                    <h4 class="redes">
+                <div id="redes">
+                    <h3 class="redes">
                         <div class="redeBtn">
                             <a href="https://www.linkedin.com/in/gustavo-de-souza-124b26194/">LinkedIn</a>
                             <a href="https://github.com/Gustavoss150">GitHub</a>
                         </div>
-                    </h4>
+                    </h3>
                 </div>
             </div>
             <div class="right">
@@ -51,9 +58,9 @@
                 </div>
             </div>
         </div>
-        <div class="designAboutMe">
+        <div id="about" class="designAboutMe">
             <div class="aboutMe">
-                <h5>Sobre mim</h5>
+                <h4>Sobre mim</h4>
                 <div class="aboutMe-content"> <!-- Novo container para imagem + texto -->
                     <div class="imgArmy">
                         <img src="c:\Users\Usuario\Downloads\WhatsApp Image 2025-03-31 at 18.06.45.jpeg" alt="imagem minha">
@@ -67,9 +74,9 @@
                         </p>
                         <p>
                             Nos anos seguintes, trabalhei na área de metal mecânica, especialmente como ferramenteiro.
-                            Apesar de gostar da profissão e do ramo, decidi que queria algo diferente para focar na vida,
-                            como sempre gostei de games e me interessava por programação iniciei a faculdade em 2023
-                            e minha transição de carreira em 2024.
+                            Apesar de gostar da profissão e do ramo, decidi que queria focar minha vida profissional 
+                            na área de tecnologia, como sempre gostei de games e me interessava por programação, 
+                            iniciei a faculdade em 2023 e minha transição de carreira em 2024.
                         </p>
                     </div>
                 </div>
@@ -78,7 +85,7 @@
 
     </main>
 <footer>
-    Rede social, copywright, DOM
+    Copyright © Gustavo de Souza DOM
 </footer>
 </body>
 </html>
