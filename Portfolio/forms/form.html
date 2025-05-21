@@ -12,27 +12,43 @@
     <table class="estrutura_inicial">
         <tr class="estrutura_linha">
             <td class="estrutura_form">
-                <form id="formulario" action="form.js">
-                    <label for="nome" class="estrutura_lab">Nome</label>
-                    <input type="text" name="nome" id="nome">
+                <form id="formulario" action="" method="post" onsubmit="contato.Enviar(event)">
+                    <div>
+                        <label for="nome" class="estrutura_lab">Nome</label>
+                        <input type="text" name="nome" id="nome" minlength="2" maxlength="100" required>
+                    </div>              
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="fone">Fone de Contato</label>
+                        <input type="text" name="fone" id="fone" minlength="10" maxlength="17" required>
+                    </div>
+                    <div>
+                        <label for="mensagem">Escreva sua mensagem</label>
+                        <textarea name="mensagem" id="mensagem" rows="5" columns="10" placeholder="Digite sua mensagem aqui..." required></textarea>
+                    </div>
+                    <div>
+                        <label for="data_cadastro">Data de Cadastro</label>
+                        <input type="date" name="data_cadastro" id="data_cadastro">
+                    </div>
+                    <div>
+                        <label for="nome">Tipo de contato:</label>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
+                        <label for="nome">E-mail</label>
+                        <input type="radio" name="tipo_contato" id="email" value="email">
 
-                    <label for="fone">Fone de Contato</label>
-                    <input type="text" name="fone" id="fone">
+                        <label for="nome">Telefone</label>
+                        <input type="radio" name="tipo_contato" id="fone" value="fone">
 
-                    <label for="mensagem">Escreva sua mensagem</label>
-                    <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem aqui..."></textarea>
-
-                    <label for="data_cadastro">Data de Cadastro</label>
-                    <input type="date" name="data_cadastro" id="data_cadastro">
-
-                    <label for="nome">Tipo de contato</label>
-                    <input type="text" name="tipo_contato" id="tipo_contato">
-
-                    <button type="submit" id="enviar">Enviar</button>
-                    <button type="reset" id="limpar">Limpar</button> 
+                        <label for="nome">WhatsApp:</label>
+                        <input type="radio" name="tipo_contato" id="whatsapp" value="whatsapp">
+                    </div>
+                    <div>
+                        <button type="submit" id="enviar">Enviar</button>
+                        <button type="reset" id="limpar">Limpar</button>
+                    </div>
                 </form>
             </td>
             <td class="estrutura_grid">

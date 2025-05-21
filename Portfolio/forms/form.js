@@ -9,7 +9,12 @@ class Contato {
     }
 
     // Métodos
-    Enviar() {
+    Enviar(event) {
+        event.preventDefault;
+        let alerta = '';
+
+        console.log = 'cheguei aqui'
+
         this.nome = document.getElementById('nome').value;
         if (this.nome === '') {
             alerta += ', Nome';
@@ -31,8 +36,15 @@ class Contato {
             alerta += ', Data Cadastro';
         }
         this.tipo_contato = document.getElementById('tipo_contato').value;
+        for (let i = 0 ; i < radios.length; i++) {
+            if (radios[i].checked) {
+                this.tipo_contato = radios[i].value;
+                break
+            };
+        }
+
         if (this.tipo_contato === '') {
-            alerta += ', Tipo Contato';
+            alerta += ', Tipo de contato';
         }
 
         if (alerta != '') {
@@ -42,22 +54,22 @@ class Contato {
         let tabela = document.getElementById('dados');
         let linha = tabela.insertRow();
 
-        linha.insertCell();
+        linha.insertCell(0);
         linha.innerHtml(this.nome);
 
-        linha.insertCell();
+        linha.insertCell(1);
         linha.innerHtml(this.email);
 
-        linha.insertCell();
+        linha.insertCell(2);
         linha.innerHtml(this.fone);
 
-        linha.insertCell();
+        linha.insertCell(3);
         linha.innerHtml(this.mensagem);
 
-        linha.insertCell();
+        linha.insertCell(4);
         linha.innerHtml(this.data_cadastro);
 
-        linha.insertCell();
+        linha.insertCell(5);
         linha.innerHtml(this.tipo_contato);
     }
 }
