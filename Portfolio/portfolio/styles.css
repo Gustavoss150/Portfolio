@@ -109,7 +109,7 @@ h1#inicio {
 
 .designIntro .left .inicio, .designIntro .basics h2 {
     font-size: 25px;
-    font-weight: 100;
+    font-weight: 300;
     padding: 0;
 }
 
@@ -214,6 +214,7 @@ strong {
     text-align: justify;
     padding: 20px;
     font-weight: 300;
+    line-height: 1.4;
 }
 
 .imgArmy img {
@@ -222,6 +223,18 @@ strong {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Preenche o espaço sem distorcer */
+}
+
+.exp h5 {
+    font-size: 30px;
+    padding-left: 25px;
+    padding-bottom: 30px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.projects {
+    background-color: rgba(0, 0, 0, 0.384);
 }
 
 footer {
