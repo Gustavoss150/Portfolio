@@ -5,6 +5,7 @@
     --primary: #4A6B5F;
     --accent: #e2e4ff2a;
     --text: #CAE0BC;
+    --strong: #95daa7;
     --glow-1: rgba(175, 245, 175, 0.199);
     --glow-2: rgba(64, 175, 149, 0.185);
     --glow-3: rgba(74, 82, 27, 0.171);
@@ -231,10 +232,38 @@ strong {
     padding-bottom: 30px;
     font-weight: 600;
     margin-top: 50px;
+    margin: 20px;
 }
 
-.projects {
+h6 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.projects_container {
     background-color: rgba(0, 0, 0, 0.384);
+    padding: 65px;
+}
+
+.empresa {
+    margin-bottom: 20px;
+}
+
+.empresa a:hover {
+    color:#4A6B5F;
+}
+
+.empresa a {
+    font-size: 20px;
+    font-weight: 650;
+    color: var(--strong);
+    transition: 0.3s;
+}
+
+.experience {
+    margin-right: 60px;
+    margin-left: 60px;
 }
 
 footer {
