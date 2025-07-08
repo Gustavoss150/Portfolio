@@ -1,5 +1,3 @@
-/* cores: https://colorhunt.co/palette/3d8d7ab3d8a8fbffe4a3d1c6 */
-
 :root {
     --dark-bg: #000000;
     --primary: #4A6B5F;
@@ -9,6 +7,8 @@
     --glow-1: rgba(175, 245, 175, 0.199);
     --glow-2: rgba(64, 175, 149, 0.185);
     --glow-3: rgba(74, 82, 27, 0.171);
+    --bg-card: rgba(0, 0, 0, 0.384);
+    --border-color: rgba(149, 218, 167, 0.2);
 }
 
 * {
@@ -50,14 +50,14 @@ header {
 .navBar {
     font-size: 20px;
     padding: 25px 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-link {
     display: flex;
     list-style: none;
     justify-content: center;
-    gap: 40px; /* Espaço entre itens reduzido */
+    gap: 40px;
     padding: 0;
     margin: 0;
 }
@@ -70,13 +70,12 @@ header {
     padding: 8px 16px;
     border-radius: 4px;
     transition: color 0.3s ease;
-    /* Remove todos os efeitos de botão */
     box-shadow: none;
     background: transparent;
 }
 
 .nav-link a:hover {
-    color: #95daa7; /* Cor do strong */
+    color: var(--strong);
     background: transparent;
     transform: none;
     box-shadow: none;
@@ -89,22 +88,22 @@ h1#inicio {
     padding-left: 80px;
     padding-bottom: 115px;
     text-align: left;
-    color: #95daa7;
+    color: var(--strong);
     display: flex;
-    flex-direction: column; /* Título principal acima dos subtítulos */
-    gap: 10px; /* Espaço entre o título e os subtítulos */
+    flex-direction: column;
+    gap: 10px;
 }
 
 .subtitulos {
     margin-inline: 60px;
     display: flex;
-    flex-direction: row; /* Subtítulos lado a lado */
-    gap: 80px; /* Espaço entre os subtítulos */
+    flex-direction: row;
+    gap: 80px;
     font-size: 20px;
 }
 
 .designIntro .left .inicio, .designIntro {
-    background-color: rgba(0, 0, 0, 0.384); /* Fundo semi-transparente */
+    background-color: var(--bg-card);
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -135,7 +134,6 @@ h1#inicio {
     align-items: left;
 }
 
-
 .designIntro .right .imgIntro img {
     width: 350px;
     height: 350px;
@@ -149,7 +147,7 @@ h1#inicio {
 }
 
 strong {
-    color: #95daa7;
+    color: var(--strong);
 }
 
 .redes {
@@ -178,17 +176,18 @@ strong {
     transition: 0.3s;
     text-decoration: none;
     background-color: var(--dark-bg);
+    border: 1px solid transparent;
 }
 
 .redes a:hover {
     transition: 0.3s;
     cursor: pointer;
     transform: translateY(-2px);
-    border: #95daa7 solid 1px;
-    color: #95daa7;
+    border-color: var(--strong);
+    color: var(--strong);
 }
 
-.aboutMe h4{
+.aboutMe h4 {
     font-size: 30px;
     padding-left: 25px;
     padding-top: 0;
@@ -205,7 +204,7 @@ strong {
 
 .aboutMe-content {
     display: flex;
-    gap: 30px; /* espaço entre imagem e texto */
+    gap: 30px;
     align-items: flex-start;
     margin: 20px 0;
 }
@@ -220,10 +219,10 @@ strong {
 
 .imgArmy img {
     margin-left: 20px;
-    min-width: 200px; /* Evita que a imagem diminua */
+    min-width: 200px;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Preenche o espaço sem distorcer */
+    object-fit: cover;
 }
 
 .exp h5 {
@@ -242,28 +241,111 @@ h6 {
 }
 
 .projects_container {
-    background-color: rgba(0, 0, 0, 0.384);
+    background-color: var(--bg-card);
     padding: 65px;
 }
 
-.empresa {
-    margin-bottom: 20px;
+/* SEÇÃO EXPERIÊNCIAS ATUALIZADA - ESTILO COERENTE */
+.experience {
+    margin: 0 60px;
 }
 
-.empresa a:hover {
-    color:#4A6B5F;
+.exp-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.exp-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--strong);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.exp-img {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-img img {
+    max-width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 4px;
+    filter: grayscale(30%) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.exp-item:hover .exp-img img {
+    filter: grayscale(0%) contrast(1.2);
+}
+
+.exp-content {
+    flex: 1;
+}
+
+.empresa {
+    margin-bottom: 15px;
 }
 
 .empresa a {
-    font-size: 20px;
-    font-weight: 650;
+    font-size: 25px;
+    font-weight: 600;
     color: var(--strong);
     transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.experience {
-    margin-right: 60px;
-    margin-left: 60px;
+.empresa a:hover {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+h7 {
+    font-size: 20px;
+    color: var(--strong);
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.descrExp p {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.tecnologias {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background-color: rgba(74, 107, 95, 0.3);
+    color: var(--strong);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: rgba(74, 107, 95, 0.5);
+    transform: translateY(-2px);
 }
 
 footer {
@@ -273,11 +355,6 @@ footer {
     font-size: 16px;
     font-weight: 300;
     text-align: center;
-}
-
-@keyframes float {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(20px, 20px); }
 }
 
 @media (max-width: 768px) {
@@ -292,5 +369,23 @@ footer {
     
     .imgArmy {
         margin: 0 auto 30px;
+    }
+
+    .exp-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .exp-img {
+        flex: 0 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .exp-img img {
+        max-height: 100px;
+    }
+
+    .experience {
+        margin: 0 20px;
     }
 }
