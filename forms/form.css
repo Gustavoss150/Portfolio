@@ -22,6 +22,7 @@ body {
     padding: 40px;
     position: relative;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 body::before {
@@ -40,135 +41,167 @@ body::before {
 
 .container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .form-panel, .grid-panel {
-    background-color: var(--dark-bg);
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid var(--decor);
     border-radius: 10px;
-    padding: 25px;
-    flex: 1 1 350px;
+    padding: 30px;
+    flex: 1 1 500px;
     min-width: 300px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    color: var(--decor);
+    font-size: 28px;
+    text-align: center;
 }
 
 .field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .field label {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: 500;
+    font-size: 18px;
 }
 
 input, textarea {
     width: 100%;
-    padding: 12px;
-    background: var(--accent);
+    padding: 14px;
+    background: rgba(74, 107, 95, 0.2);
     border: 1px solid var(--primary);
     border-radius: 6px;
     color: var(--text);
     font-family: 'Inter', sans-serif;
-    transition: background-color 0.3s, outline 0.3s;
+    transition: all 0.3s ease;
+    font-size: 16px;
 }
 
 input:focus, textarea:focus {
-    outline: 1px solid var(--decor);
-    background-color: var(--glow-1);
+    outline: none;
+    border-color: var(--decor);
+    box-shadow: 0 0 0 2px rgba(149, 218, 167, 0.3);
 }
 
 .button-group {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 button {
-    padding: 10px 25px;
-    background-color: var(--dark-bg);
+    padding: 12px 30px;
+    background-color: var(--primary);
     color: var(--text);
-    border: none;
-    border-radius: 10px;
-    transition: transform 0.2s, border 0.3s, color 0.3s;
+    border: 1px solid var(--decor);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
 }
 
 button:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
-    border: 1px solid var(--decor);
-    color: var(--decor);
+    background-color: var(--decor);
+    color: var(--dark-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#limpar {
+    background-color: transparent;
 }
 
 .grid-panel table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .grid-panel th, .grid-panel td {
-    padding: 12px 15px;
+    padding: 14px 15px;
     text-align: left;
-    border-bottom: 1px solid var(--decor);
+    border-bottom: 1px solid rgba(149, 218, 167, 0.3);
+}
+
+.grid-panel th {
+    color: var(--decor);
+    font-weight: 600;
+}
+
+.grid-panel tbody tr:hover {
+    background-color: rgba(74, 107, 95, 0.1);
 }
 
 .radio-group {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .radio-option {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
 
 .radio-option input[type="radio"] {
     appearance: none;
-    width: 8px;
-    height: 8px;
+    width: 20px;
+    height: 20px;
     border: 2px solid var(--decor);
     border-radius: 50%;
     position: relative;
     cursor: pointer;
 }
 
-.radio-option input[type="radio"]::after {
+.radio-option input[type="radio"]:checked::before {
     content: '';
     position: absolute;
-    top: 7.5px;
+    top: 8px;
     left: 8px;
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    transform: scale(0);
-    transition: transform 0.2s ease-in-out;
     background: var(--decor);
-}
-
-.radio-option input[type="radio"]:checked::after {
-    transform: scale(1);
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
     .container {
         flex-direction: column;
     }
+    
     .grid-panel {
         overflow-x: auto;
     }
+    
     .grid-panel table {
         min-width: 600px;
+    }
+    
+    .button-group {
+        flex-direction: column;
     }
 }
