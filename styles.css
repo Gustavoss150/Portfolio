@@ -453,52 +453,133 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Nav link: Mantenha horizontal, ajuste gap e padding para evitar sobreposição à esquerda */
     .nav-link {
-        gap: 20px;
+        gap: 1px; /* Reduza gap para caber mais */
+        flex-wrap: wrap; /* Quebre linha se necessário */
+        align-items: center; /* Alinhe à esquerda, mas evite sobrepor */
+        padding: 10px; /* Adicione padding interno para espaçamento */
+    }
+    
+    .nav-link a {
+        font-size: 14px; /* Reduza fonte para caber */
+        padding: 5px 10px; /* Reduza padding */
+    }
+    
+    .designIntro {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .designIntro .left, .designIntro .right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .imgIntro img {
+        width: 100px;
+        height: 140px;
+        margin: 0 auto;
     }
     
     .aboutMe-content {
         flex-direction: column;
-    }
-    
-    .imgArmy {
-        margin: 0 auto 30px;
-    }
-
-    .exp-item {
-        flex-direction: column;
+        align-items: justify;
         gap: 20px;
     }
-
-    .exp-img {
-        flex: 0 0 auto;
-        margin-bottom: 20px;
-    }
-
-    .exp-img img {
-        max-height: 100px;
-    }
-
-    .experience {
-        margin: 0 20px;
-    }
-
-    .proj_1, .proj_2 {
-        grid-template-columns: 1fr;
+    
+    .aboutMe p {
+        font-size: 12px;
+        padding: 10px;
+        line-height: 1.3;
+        text-align: justify;
     }
     
-    .project-media-container {
-        justify-content: center;
-        order: 2;
-        margin-top: 20px;
+    .imgArmy img {
+        margin: 5px auto 20px;
+    }
+    
+    .exp-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .exp-img img {
+        max-height: 80px;
+    }
+    
+    .experience {
+        margin: 0 10px;
+    }
+    
+    .descrExp p {
+        font-size: 14px;
+    }
+    
+    .empresa a {
+        font-size: 18px; 
+    }
+    
+    .proj_1, .proj_2 {
+        grid-template-columns: 1fr; /* Uma coluna para empilhar */
+        gap: 1px;
     }
     
     .proj-content {
+        order: 2;
+    }
+    
+    .project-media-container {
         order: 1;
+        justify-content: center;
+    }
+    
+    .project-video {
+        max-width: 100%;
+    }
+    
+    .proj_1 h6, .proj_2 h6 {
+        font-size: 20px;
+    }
+    
+    .proj_1 p, .proj_2 p {
+        font-size: 14px;
+        line-height: 1.3;
     }
     
     .proj_1 .tecnologias, .proj_2 .tecnologias {
-        order: 3;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    /* Geral: Reduza paddings e margins para economizar espaço */
+    .projects_container {
+        padding: 20px;
+    }
+    
+    h1#inicio {
+        font-size: 30px;
+        padding-top: 150px;
+        padding-left: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .subtitulos {
+        font-size: 16px; 
+        gap: 20px;
+        margin-inline: 20px;
+    }
+    
+    .redes {
+        padding-top: 50px;
+    }
+    
+    .redes a {
+        font-size: 16px;
+        padding: 8px 15px;
     }
 }
